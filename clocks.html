@@ -11,20 +11,33 @@
     <h1 id="fpga_components">Clocks</h1>
     <p>
 
+  <p>
+    - All 
+    - Skew: the difference in time from when the clock arrives at one flip-flop and another flip-flop.
+    - Routing logic is pretty good, but it's not instantaneous.
+    - Tools these days now can account for skew in timing analysis.
+  </p>
+
       <ul>
-        <li>Adders</li>
+        <li>Clock Skew: the difference in time from when the clock arrives at one flip-flop and another flip-flop.</li>
           <ul>
-            <li>Number systems</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Routing logic is pretty good, but it's not instantaneous.</li>
+            <li>Tools these days now can account for skew in timing analysis.</li>
             <li></li>
           </ul>
-        <li>FIFOs</li>
-        <li></li>
+        <li>Multiple Clocks</li>
+        <li>
+          <ul>
+            <li>For beginners, it's recommended to avoid multiple clocks
+            <li>Usually only need different clocks if interfacing to some external component that requires it</li>
+              <ul>
+                <li>SDAM, Camera, Special Sensor</li>
+                <li>Phase-Locked Loop (PPL) does this: takes in a reference clock, then it will spin it up to a very high rate (GHz-range) then tap off it to divide down to the clock you want</li>
+              </ul>
+            <li>Other clocks</li>
+              <ul></ul>
+          </ul>          
+        </li>
         <li><b>Microprocessors</b>: all place and route files</li>
           <ul>
             <li>include</li>
