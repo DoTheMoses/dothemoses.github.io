@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheet_main_fpga.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦐</text></svg>">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!--Navigation Bar-->
+    <h1 id="fpga_components">SPI</h1>
+    <p>
+
+      <ul>
+        <li><b>Clock Skew</b>: the difference in time from when the clock arrives at one flip-flop and another flip-flop.</li>
+          <ul>
+            <li>Routing logic is pretty good, but it's not instantaneous.</li>
+            <li>Tools these days now can account for skew in timing analysis.</li>
+          </ul>
+        <li><b>Signals</b></li>
+          <ul>
+            <li>SCLK: clock</li>
+            <li>MOSI: Manager Out, Subordinate In</li>
+            <li>MISO: Manager In, Subordinate Out</li>
+            <ul>
+                <li>SDRAM, cameras, special sensors</li>
+                <li>Phase-Locked Loop (PPL) does this: takes in a reference clock, then it will spin it up to a very high rate (GHz-range) then tap off it to divide down to the clock you want</li>
+                <li>Will need multiple clocks for high-speed serial interfaces, high speed memory interfaces</li>
+              </ul>
+            <li>CS/SS: Chip Select/Subordinate Select</li>
+              <ul></ul>
+          </ul>          
+        <li><b>Clock Domain Crossing</b>: when clocks cross from one domain to another</li>
+          <ul>
+            <li>include</li>
+          </ul>
+      </ul>
+
+    <p>
+      From the AXI Protocol website:
+      Inclusive language commitment
+      Arm values inclusive communities. Arm recognizes that we and our industry have used terms that can be offensive.
+      Arm strives to lead the industry and create change.
+      Previous issues of this document included terms that can be offensive. We have replaced these terms. If you find offensive terms
+      in this document, please contact terms@arm.com.
+    </p>
+
+    <p>
+      Notes taken from <a href="https://www.youtube.com/watch?v=htwlb-DuEK8">this video</a>.<br><br>
+      <a href="fpgadesign.html">Back to top level.</a>
+    </p>
+
+  </body>
+</html>
